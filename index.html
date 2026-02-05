@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Love Yusra ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+.container{
+padding:40px 20px;
+max-width:900px;
+margin:auto;
+}
+
+h1{
+font-family:'Dancing Script',cursive;
+font-size:48px;
+margin-bottom:10px;
+}
+
+.message{
+font-size:18px;
+line-height:1.7;
+margin:25px auto;
+max-width:700px;
+background:rgba(255,255,255,0.15);
+padding:20px;
+border-radius:20px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:15px;
+margin:30px 0;
+}
+
+.gallery img{
+width:100%;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+button{
+margin-top:25px;
+padding:14px 30px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:#ff1744;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#e60035;
+}
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:22px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);opacity:1;}
+100%{transform:translateY(-100vh);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>My Forever Love 💖 Yusra</h1>
+
+<div class="message">
+Yusra ❤️,<br><br>
+
+Tum meri zindagi ki sabse khoobsurat kahani ho 📖✨<br>
+Tumhari muskurahat meri duniya hai 😘<br><br>
+
+Main har din tumse aur zyada pyaar karta hoon 💕<br>
+Hamesha tumhare saath rehna chahta hoon 💍<br><br>
+
+Will you be mine forever? 🥺❤️
+</div>
+
+<h2>Our Beautiful Memories 📸</h2>
+
+<div class="gallery">
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+</div>
+
+<button onclick="proposal()">Yes, I’m Yours 😘💍</button>
+
+</div>
+
+<!-- Background Music -->
+<audio autoplay loop controls style="margin-bottom:20px;">
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function proposal(){
+alert("Yusra ❤️\nTum meri duniya ho 😘\nI Love You Forever 💖💍");
+}
+
+function createHeart(){
+const heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(18+Math.random()*20)+"px";
+heart.style.animationDuration=(4+Math.random()*3)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{heart.remove();},6000);
+}
+
+setInterval(createHeart,300);
+</script>
+
+</body>
+</html>
